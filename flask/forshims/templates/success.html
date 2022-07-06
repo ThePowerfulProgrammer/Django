@@ -1,0 +1,12 @@
+{%extends 'layout.html' %}
+{%block body %}
+<h1>You have registered, {{ name }} For the sport {{ sport }}</h1>
+
+
+{% for row in rows %}
+    <p>{{row.name]}}</p>
+    <p>{{row.sport]}}</p>
+
+{%endfor%}
+
+{% endblock%}

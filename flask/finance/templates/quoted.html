@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+
+    <h1 style='text-align: center;'>Your Lookup</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            {% for k in range(1) %}
+                <tr>
+                    <th>{{ stock['name'] }}</th>
+                    <th>{{ stock['price'] }}</th>
+                    <th>{{ stock['symbol'] }}</th>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
