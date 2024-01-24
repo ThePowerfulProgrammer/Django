@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    
+    {% extends "Home/base.html" %}
+    
+    {% block <block> %}
+        
+        <!-- templates/contact.html -->
+        <h1>Contact Us</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="form-actions">
+            <button type="submit">Send</button>
+            </div>
+        </form>
+
+    {% endblock %}
+
+</body>
+</html>
