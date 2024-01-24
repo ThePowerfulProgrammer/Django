@@ -4,5 +4,6 @@ from .import views
 app_name = "Contact"
 
 urlpatterns = [
-
+    path("contact/",views.contactView,name="contact")
 ]
+

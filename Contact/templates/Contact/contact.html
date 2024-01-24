@@ -13,13 +13,22 @@
         
         <!-- templates/contact.html -->
         <h1>Contact Us</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <div class="form-actions">
-            <button type="submit">Send</button>
+        <div class="container">
+            <div class="row">  
+                <form action="{% url 'Contact:contact' %}" method="post">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    </div>
+                    
+                    <div class="form-actions">
+                    <button type="submit">Send</button>
+                    </div>
+
+                </form>
+                
             </div>
-        </form>
+        </div>
 
     {% endblock %}
 

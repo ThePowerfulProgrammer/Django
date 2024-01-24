@@ -4,8 +4,8 @@ from .models import Contact
 
 # Class to create a contact form
 class ContactForm(forms.Form):
-    name = forms.CharField(required=True)
-    from_email = forms.EmailField(required=False)
+    name = forms.CharField(required=True, widget=forms.TextInput(attrs={"class": "form-control"}))
+    email = forms.EmailField(required=False)
     subject = forms.CharField(max_length=40)
     body = forms.CharField(widget=forms.Textarea, required=True)
     
