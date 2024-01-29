@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% extends "Home/base.html" %}
+
+    {% load static %}
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    {% block <css> %}
+        <link rel="stylesheet" href="{% static 'Home/contact.css' %}">
+    {% endblock %}
+
+    {% block <pageTitle> %}
+      <title>Contact</title> 
+    {% endblock %}
 </head>
 <body>
     
-    {% extends "Home/base.html" %}
     
     {% block <block> %}
         
         <!-- templates/contact.html -->
-        <h1>Contact Us</h1>
+        <h1 class="banner text-center">Contact Us</h1>
         <div class="container">
             <div class="row">  
-                <form action="{% url 'Contact:contact' %}" method="post">
-                    <div class="form-group">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                    </div>
-                    
-                    <div class="form-actions">
-                    <button type="submit">Send</button>
-                    </div>
+                <div class="col-md-12 col-sm-12 " >
+                    <form action="{% url 'Contact:contact' %}" method="post">
+                        <div class="form-group mb-2">
+                            {% csrf_token %}
+                            <label for="name">Name: </label>
+                            {{ form.name }}
+                        </div>
 
-                </form>
-                
+                        <div class="form-group mb-2">
+                            {% csrf_token %}
+                            <label for="email">Email: </label>
+                            {{ form.email }}
+
+                        </div>
+
+                        <div class="form-group mb-2">
+                            {% csrf_token %}
+                            <label for="subject">Subject: </label>
+                            {{ form.subject }}
+                        </div>
+                        
+                        <div class="form-group mb-2">
+                            {% csrf_token %}
+                            <label for="body">Body: </label>
+                            {{ form.body }}
+                        </div>
+
+                        <div class="form-action">
+                        <button class="my-2 btn btn-outline-dark" type="submit">Send</button>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
 

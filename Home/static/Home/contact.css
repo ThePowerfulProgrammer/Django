@@ -1,0 +1,14 @@
+.banner {
+    font-family: 'Times New Roman', Times, serif;    
+}
+
+label {
+    margin-bottom: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-control {
+    border: 2px solid palevioletred;
+    font-family: 'Times New Roman', Times, serif;
+}
+

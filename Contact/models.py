@@ -3,7 +3,7 @@ from django.core.validators import EmailValidator
 
 class Contact(models.Model):
     """A model for storing contact requests from users."""
-
+    
     name = models.CharField(max_length=50, blank=False)
     email = models.EmailField(blank=True, validators=[EmailValidator])
     subject = models.CharField(max_length=40, blank=False)

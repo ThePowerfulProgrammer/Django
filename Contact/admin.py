@@ -3,4 +3,13 @@ from .models import Contact
 
 # Register your models here.
 
-admin.site.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    
+    list_display = ["name","email","subject"]
+    
+    fieldsets = [
+        ("Personal Details",{'fields':['name', 'email']}),
+        ("Message", {'fields':['subject', 'body']})
+    ]
+
+admin.site.register(Contact, ContactAdmin)
