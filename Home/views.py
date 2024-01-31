@@ -9,6 +9,7 @@ from .forms import ContactForm
 def homeView(request):
     return render(request,template_name="Home/home.html", context={})
 
+# not using this
 def aboutView(request):
     data = {
         "name": "Ashish Ramnath",

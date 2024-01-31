@@ -1,0 +1,29 @@
+{% extends "Home/base.html" %}
+
+{% block <block> %}
+
+    {% if latest_post_list %} 
+        <ul>
+            {% for post in latest_post_list %} 
+                <div class="container"> 
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                                        
+                            <div class="card my-3">
+                                <div class="card-body">
+                                    <h2 class="card-title"> {{ post.title }} -- {{ post.created_on }} </h2>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>NO posts avaliable </p>
+    {% endif %}
+
+{% endblock %}
