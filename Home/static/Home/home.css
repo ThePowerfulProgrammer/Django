@@ -1,9 +1,66 @@
-
-
-
-.navbar {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
 .banner {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+.jumbotron {
+    background-color: #fb0b0b00;
+}
+
+.one {
+    color: #59C9A5;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.two {
+    color: #F7F7FF;
+    font-family: "Poor Story", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.three {
+    color: #F7F7FF;
+    font-family: "Poor Story", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.btn-outline-success {
+    color:#59C9A5;
+    font-family: 'Courier New', Courier, monospace;
+    border-color: #59C9A5;
+  }
+  
+.btn-outline-success:hover {
+    color: black;
+    background-color: #F7F7FF;
+}
+
+
+.btn {
+    color: #59C9A5;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.bg {
+    background-color: #E3D3E4;
+    color: #000000;
+    font-family: "Poor Story", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.four {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+

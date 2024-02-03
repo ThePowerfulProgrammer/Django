@@ -1,0 +1,41 @@
+{% extends 'Home/base.html' %}
+
+{% block <pageTitle> %}
+    <title>{{ post.title }}</title>
+{% endblock %}
+
+{% block <block> %}
+
+    <small>
+        {{ post.created_on.date }} | Categories: 
+        {% for category in post.categories.all %} 
+            <a href="{% url 'Blog:category' category.name %}">
+                {{ category.name }}
+            </a>
+        {% endfor %}
+    </small>
+    <p>{{ post.body | linebreaks }}</p>
+
+
+    <h3 class="my-2">Leave a Comment :^) </h3>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-actions">
+        <button type="submit">Send</button>
+        </div>
+    </form>
+
+    {% for comment in comments %}
+        <p>
+            {{comment.created_on.date }} <b>{{comment.author}}</b> wrote:
+        </P>
+        <p>
+            {{comment.body | linebreaks }} 
+        </P>
+
+    {% endfor %}
+
+
+{% endblock %}

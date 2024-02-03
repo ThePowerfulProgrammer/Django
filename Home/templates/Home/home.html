@@ -20,19 +20,19 @@
     
     
     {% block <block> %}
-        <h1 class="banner text-center text-uppercase my-3">The powerful programmer</h1>
-        <div class="container">
+
+      <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <!--Intro Jumbo-->
                     <div class="jumbotron-fluid my-4 text-white bg-dark rounded p-3 " id="About">
-                        <h2 class="display-3"><code>A Snippet on Me</code> </h2>
+                        <h1 class="lead one">A Snippet on Me</h3>
                         <hr>
-                        <h1 class="lead">Hi, I'm Ashish Ramnath - Software Developer</h1>
-                        <h1 class="lead">You can call me Ash</h1>
+                        <h3 class="display-4 two">Hi, I'm Ashish Ramnath - Software Developer</h3>
+                        <h3 class="display-4 three">You can call me Ash</h3>
                         
                         <br>
-                        <p class="lead">
+                        <p class="lead four">
                         I am a Final year BSc Computer Science Student @ University of South Africa.
                         <br>
                         This website serves as a means to Contact me, Access and view some of my work on Github, and actively participate in my Blog.
@@ -40,18 +40,9 @@
                         You will also get a look at some of the Development services I offer.
                         </p>
 
-                        <p class="lead my-4">
-                        Projects in Development
-                        </p>
+                        <br>
+                        <a href="https://www.youtube.com/@thepowerfulprogrammer/videos" class="btn btn-outline-success btn-lg my-3 contact-link" target="_blank">Join the darkside</a>
 
-                        <ul>
-                        <li>Personal Website</li>
-                        <li>OOP Based GUI</li>
-                        <li>C++ 100 LeetCode Problems</li>
-                        <li><a href="https://www.youtube.com/channel/UCnq4535GtV-6MM2T5-KNZLg" class="YT-link" target="_blank">Check out my YT channel</a></li>
-                        </ul>
-
-                        <a href="https://www.linkedin.com/in/ashish-ramnath/" class="btn btn-primary btn-sm my-3 contact-link" target="_blank">Message me</a>
 
                         <blockquote class="blockquote mt-2">
                         <p class="mb-2">A program is never less than 90% complete, and never more than 95% complete.</p>
@@ -65,35 +56,33 @@
             </div>
 
 
-            <div class="row">
+            {% comment %} <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <img class="img-fluid mx-auto d-block" src="{% static 'Home/img/berserkSymbol.png' %}" alt="My Image">
                 </div>
+            </div> {% endcomment %}
+
+
+
+            <div class="col-md-12 col-sm-12">
+              <footer class="bg text-center my-4">
+                <!-- Copyright -->
+                <div class="text-center" >
+                  <p class="footer-text">© <span id="year">--</span> Copyright: Ashish Ramnath</p>
+                  <script>
+                    document.getElementById('year').innerHTML = new Date().getFullYear();
+                  </script>
+                </div>
+                <!-- Copyright -->
+              </footer>
+
             </div>
             
         </div>
 
-        <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12">
-                <div class="container bg-dark  rounded">
-                  <!-- <h2 class="display-3">In Closing! </h2>
-                  <p class="lead">Goals Are Actions, not Dreams!</p> -->
-                  <hr>
-                  <footer class="py-3 my-4">
-                    <ul class="nav justify-content-center border-bottom pb-3 mb-3 text-md " >
-                      <li class="nav-item footer-links" ><a href="{% url 'Home:home' %}" class="nav-link px-2 ">Home</a></li>
-                      <li class="nav-item footer-links"><a href="#" class="nav-link px-2">Features</a></li>
-                      <li class="nav-item footer-links"><a href="#" class="nav-link px-2">Pricing</a></li>
-                      <li class="nav-item footer-links"><a href="{% url 'Home:about' %}" class="nav-link px-2">About</a></li>
-                      <li class="nav-item footer-links"><a href="{% url 'Contact:contact' %}" class="nav-link px-2" target=_blank>Contact</a></li>
-                    </ul>
-                    <h4 class="card-title copyright text-center text-white">&copy The Powerful Programmer</h4>
-                  </footer>
-                </div>
-              </div>
-            </div>
-          </div>
+    
+
+
 
     {% endblock %}
 

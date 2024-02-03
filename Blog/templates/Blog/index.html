@@ -1,4 +1,13 @@
 {% extends "Home/base.html" %}
+{% load static %}
+
+{% block <pageTitle> %}
+    <title>Blog Index</title>
+{% endblock %}
+
+{% block <css> %}
+    <link rel="stylesheet" href="{% static 'Home/blogIndex.css' %}">
+{% endblock %}
 
 {% block <block> %}
 
@@ -7,13 +16,28 @@
             {% for post in latest_post_list %} 
                 <div class="container"> 
                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-md-12 col-sm-12">
                                         
                             <div class="card my-3">
                                 <div class="card-body">
-                                    <h2 class="card-title"> {{ post.title }} -- {{ post.created_on }} </h2>
+                                    <h3 class=""> <a href="{% url 'Blog:detail' post.id %}" class=""> {{ post.title }}</a></h2>
+                                    <small>
+                                        {{post.created_on.date}} | Categories:
+                                        {% for category in post.categories.all %} 
+                                    
+                                            <a href="{% url 'Blog:category' category.name %}">
+                                                {{category.name}}
+                                            </a>
+                                        {% endfor %}
+                                        
+                                    </small>
+                                    <p>{{ post.body | slice:"400"}}...</p>
+
+                                    
                                 </div>
                             </div>
+
+
 
                         </div>
 

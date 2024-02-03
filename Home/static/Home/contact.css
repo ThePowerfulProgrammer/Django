@@ -1,5 +1,7 @@
 .banner {
-    font-family: 'Times New Roman', Times, serif;    
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 label {
@@ -8,7 +10,8 @@ label {
 }
 
 .form-control {
-    border: 2px solid palevioletred;
-    font-family: 'Times New Roman', Times, serif;
-}
+    border: 2px solid #59C9A5;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
 

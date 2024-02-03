@@ -6,6 +6,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Protest+Strike&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto+Condensed:ital,wght@1,100&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poor+Story&family=Roboto+Condensed:ital,wght@1,100&display=swap" rel="stylesheet">
+
+    <!--Font end-->
+
     {% block <css> %}
       <link rel="stylesheet" href="static/Home/base.html"/>  <!-- This will be overridden-->
     {% endblock %}
@@ -14,8 +30,45 @@
       <title>Base</title>
     {% endblock  %} 
 </head>
+
+<style>
+body {
+  background-color: #E3D3E4;
+}
+
+.navbar {
+  font-family: "Oswald", sans-serif;
+  font-family: 100;
+  font-style: normal;
+}
+
+
+.nav-link:hover {
+  border-bottom: 2px solid;
+  border-bottom-color: #E3D3E4;
+}
+
+.dropdown-menu {
+  padding: 0;
+}
+
+.dropdown-item {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  
+}
+
+.dropdown-item:hover {
+  color: #59C9A5;
+  font-weight: 600;
+}
+
+
+</style>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-md">
         <div class="container-fluid">
           <a class="navbar-brand" href="{% url 'Home:home' %}">Icon </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,18 +76,10 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item">                                 
-                <a class="nav-link active" aria-current="page" href="">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="https://github.com/ThePowerfulProgrammer" target="_blank">Github</a>
-              </li>
-              <li class="nav-item">       
-                <a class="nav-link" href="">Blog</a>
-              </li>
+              
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown 
+                  More 
                 </a>
                 <ul class="dropdown-menu">          
                   <li><a class="dropdown-item" href="{% url 'Contact:contact' %}">Contact</a></li>
@@ -42,6 +87,19 @@
                   <li><a class="dropdown-item" href="{% url 'Home:about' %}">About</a></li>
                 </ul>
               </li>
+
+
+              <li class="nav-item">                                 
+                <a class="nav-link active" aria-current="page" href="">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="https://github.com/ThePowerfulProgrammer" target="_blank">Github</a>
+              </li>
+
+              <li class="nav-item">       
+                <a class="nav-link" href="{% url 'Blog:index' %}">Blog</a>
+              </li>
+
             </ul>
           </div>
         </div>
