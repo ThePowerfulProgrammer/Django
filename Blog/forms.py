@@ -6,13 +6,14 @@ class CommentForm(forms.Form):
                               max_length=40,
                               widget=forms.TextInput(
                                   attrs={"class":"form-control", 
-                                         "placeholder":"Your Name",}
+                                         "placeholder":"Your Name",
+                                         }
                                 ),
                               )
     body = forms.CharField(required=True,
         widget=forms.Textarea(
             attrs={"class":"form-control",
-                   "placeholder":"Leave a comment",}
+                   "placeholder":"Leave a comment :^)",}
         )
     )
     

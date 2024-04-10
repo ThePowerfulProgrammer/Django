@@ -1,41 +1,80 @@
 {% extends 'Home/base.html' %}
+{% load static %}
 
 {% block <pageTitle> %}
     <title>{{ post.title }}</title>
 {% endblock %}
 
+{% block <css> %}
+    <link rel="stylesheet" href="{% static 'Home/blogDetail.css' %}">
+{% endblock %}
+
 {% block <block> %}
 
-    <small>
-        {{ post.created_on.date }} | Categories: 
-        {% for category in post.categories.all %} 
-            <a href="{% url 'Blog:category' category.name %}">
-                {{ category.name }}
-            </a>
-        {% endfor %}
-    </small>
-    <p>{{ post.body | linebreaks }}</p>
 
-
-    <h3 class="my-2">Leave a Comment :^) </h3>
-
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="form-actions">
-        <button type="submit">Send</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="card bg-dark  border border-dark rounded px-2 my-3">
+                    <h2 class="card-title mt-2">{{ post.title | title }}</h2>
+                    <div class="card-body">
+                        <h5 class="card-subtitle">{{ post.created_on.date }} | Categories: </h5> 
+                        {% for category in post.categories.all %} 
+                            <a href="{% url 'Blog:category' category.name %}">
+                                {{ category.name }}  <br>
+                            </a>
+                        {% endfor %}
+                        <br>
+                        <p>{{ post.body | linebreaks }}</p>
+                    </div>
+            
+                </div>
+            </div>
         </div>
-    </form>
+    </div>
 
-    {% for comment in comments %}
-        <p>
-            {{comment.created_on.date }} <b>{{comment.author}}</b> wrote:
-        </P>
-        <p>
-            {{comment.body | linebreaks }} 
-        </P>
 
-    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h6 class="my-2 display-6">Leave a Comment </h6>
+                <div class="form-group">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="form-actions">
+                        <button type="submit" class="btn btn-outline-dark">Send</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+
+            <div class="comment-box  my-4 text-white rounded py-2 px-2"> 
+                    {% for comment in comments %}
+                    <div class="indivual-comment rounded p-2 mb-2 bg-dark"> 
+                        <p class="comment-date-author">
+                            {{comment.created_on.date | upper}} <b>{{comment.author}}</b> wrote:
+                        </P>
+                        
+                        <p class="comment-body">
+                            {{comment.body | linebreaks }} 
+                        </P>
+                    </div>
+            
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
 
 
 {% endblock %}

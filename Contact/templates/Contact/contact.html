@@ -21,11 +21,12 @@
     {% block <block> %}
         
         <!-- templates/contact.html -->
-        <h1 class="banner text-center">Contact Us</h1>
+        <h1 class="banner text-center mt-3">Contact Me</h1>
         <div class="container">
             <div class="row">  
                 <div class="col-md-12 col-sm-12 " >
                     <form action="{% url 'Contact:contact' %}" method="post">
+
                         <div class="form-group mb-2">
                             {% csrf_token %}
                             <label for="name">Name: </label>
@@ -52,7 +53,7 @@
                         </div>
 
                         <div class="form-action">
-                        <button class="my-2 btn btn-outline-dark" type="submit">Send</button>
+                        <button class="my-2 btn btn-dark" type="submit">Send</button>
                         </div>
 
                     </form>

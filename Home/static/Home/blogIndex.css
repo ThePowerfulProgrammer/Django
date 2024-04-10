@@ -1,3 +1,15 @@
 .card {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F7F7FF;
+}
+
+a {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #59C9A5;
+    text-decoration: underline;
+    text-decoration-color:#E3D3E4; 
 }

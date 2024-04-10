@@ -1,0 +1,77 @@
+.card-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #59C9A5;
+    text-decoration: underline;
+    text-decoration-color:#E3D3E4; 
+}
+
+.card-title:hover {
+    color: #E3D3E4;
+    text-decoration: underline;
+    text-decoration-color: #59C9A5; 
+}
+
+.card-subtitle {
+    color: #F7F7FF;
+}
+
+.card-body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F7F7FF;
+}
+
+.card a {
+    color: #59C9A5;
+}
+
+.card a:hover {
+    color: #E3D3E4;
+}
+
+.card .card-subtitle {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.display-6 {
+
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.form-group {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.form-control {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: 2px solid #000000;
+}
+
+.indivual-comment {
+    border: 1px solid #F7F7FF;
+}
+
+.comment-date-author {
+    color: #59C9A5;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.comment-body {
+    color: #F7F7FF;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

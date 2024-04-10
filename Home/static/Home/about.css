@@ -1,0 +1,15 @@
+html {
+    background-color: #04080F;
+}
+
+img {
+    border: 1px solid #04080F;
+}
+
+/* .overlay-text {
+    position: absolute;
+    bottom: -55px;
+    right: 70px;
+    transform: translate(-50%, -50%); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+} */

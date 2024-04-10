@@ -15,59 +15,19 @@
     {% endblock %}
 </head>
 
-<body>
+<body class="bg">
     
     
     {% block <block> %}
-        {% comment %} <h1 class="banner text-center text-uppercase my-3"></h1> {% endcomment %}
-        <div class="container  mb-4">
-            <div class="row ">
-                <div class="col-md-12 col-sm-12">
-                    <!--Intro Jumbo-->
-                    <div class="jumbotron-fluid my-4 text-white bg-dark rounded p-3 " id="About">
-                        <h2 class="display-3"><code>A Snippet on Me</code> </h2>
-                        <hr>
-                        <h1 class="lead">Hi, I'm Ashish Ramnath - Software Developer</h1>
-                        <h1 class="lead">You can call me Ash</h1>
-                        
-                        <br>
-                        <p class="lead">
-                        I am a Final year BSc Computer Science Student @ University of South Africa.
-                        <br>
-                        This website serves as a means to Contact me, Access and view some of my work on Github, and actively participate in my Blog.
-                        <br>
-                        You will also get a look at some of the Development services I offer.
-                        </p>
-
-                        <p class="lead my-4">
-                        Projects in Development
-                        </p>
-
-                        <ul>
-                        <li>Personal Website</li>
-                        <li>OOP Based GUI</li>
-                        <li>C++ 100 LeetCode Problems</li>
-                        <li><a href="https://www.youtube.com/channel/UCnq4535GtV-6MM2T5-KNZLg" class="YT-link" target="_blank">Check out my YT channel</a></li>
-                        </ul>
-
-                        <a href="https://www.linkedin.com/in/ashish-ramnath/" class="btn btn-primary btn-sm my-3 contact-link" target="_blank">Message me</a>
-
-                        <blockquote class="blockquote mt-2">
-                        <p class="mb-2">A program is never less than 90% complete, and never more than 95% complete.</p>
-                        <footer class="blockquote-footer">Coder <cite title="Terry Baker">Terry Baker</cite></footer>
-                        </blockquote>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            
-        </div>
-
-
+        
+        <!-- Background image: Only display when max-width >=  -->
+                
+                <a href="{% url 'Home:home' %}"><img class="img-fluid" src="{% static 'Home/img/banner.png' %}" alt="It's a Picture of Me Ash"></a>
+                
+                {% comment %} <div class="overlay-text">
+                    <p class="lead text-white">Hello, I'm Ash!</p>
+                </div> {% endcomment %}
+        <!-- Background image -->
 
     {% endblock %}
 

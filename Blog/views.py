@@ -56,3 +56,4 @@ def postDetailView(request,pk):
     return render(request,"Blog/detail.html", context)
 
     
+    

@@ -38,7 +38,7 @@ body {
 
 .navbar {
   font-family: "Oswald", sans-serif;
-  font-family: 100;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -90,7 +90,7 @@ body {
 
 
               <li class="nav-item">                                 
-                <a class="nav-link active" aria-current="page" href="">Services</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'Services:simple' %}">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="https://github.com/ThePowerfulProgrammer" target="_blank">Github</a>
@@ -104,7 +104,6 @@ body {
           </div>
         </div>
       </nav>
-      <br>
     
     
     {% block <block> %}

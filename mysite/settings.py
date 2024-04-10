@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-x*pcc1$$eg#vc2f1(^aeiqw087&j0d4&y@guc*z%4y%3n#bxz)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['192.168.1.54', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -34,6 +33,7 @@ INSTALLED_APPS = [
     'Home.apps.HomeConfig',
     'Contact.apps.ContactConfig',
     'Blog.apps.BlogConfig',
+    'Services.apps.ServicesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,3 +127,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Base URL to serve media files
+MEDIA_URL = '/media/'
+
+# Path where media files are stored
+MEDIA_ROOT = BASE_DIR / 'media'
