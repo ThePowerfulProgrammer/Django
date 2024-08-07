@@ -1,0 +1,12 @@
+{%extends 'layout.html' %}
+{%block body %}
+
+
+        {% for user in users %}
+
+                <p>Details: {{ user.name }}</p>
+                <p>Details: {{ user.compound }}</p>
+                <p>Details: {{ user.assistance }}</p>
+        {% endfor %}
+        <a href='/users'>To users</a>
+{% endblock%}

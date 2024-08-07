@@ -1,0 +1,36 @@
+{%extends 'layout.html' %}
+{%block body %}
+
+
+        <form action='/register' method='post'>
+
+            <input name='name' type='text' placeholder='Name'>
+
+            <select name='compound'>
+
+                <option disabled selected value=''>Sport</option>
+
+                {% for exercise in compound %}
+                    <option value='{{ exercise }}' sport='exercise'>{{ exercise }}</option>
+                {% endfor %}
+
+            </select>
+
+            <select name='assistance'>
+
+                <option disabled selected value=''>Sport</option>
+
+                {% for exercise in assistance %}
+                    <option value='{{ exercise }}' sport='exercise'>{{ exercise }}</option>
+                {% endfor %}
+
+            </select>
+
+
+            <input type='submit'>
+        </form>
+
+
+
+
+{% endblock%}

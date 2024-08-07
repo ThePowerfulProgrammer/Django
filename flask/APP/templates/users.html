@@ -1,0 +1,11 @@
+{%extends 'layout.html' %}
+{%block body %}
+
+        <h1>Users page</h1>
+        {% for user in users %}
+
+                <p>Details: {{ user.name }}</p>
+                <p>Details: {{ user.compound }}</p>
+                <p>Details: {{ user.assistance }}</p>
+        {% endfor %}
+{% endblock%}
